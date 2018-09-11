@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <?!= HtmlService.createHtmlOutputFromFile('stylesheet').getContent(); ?>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header"><a class="navbar-brand" href="#">講義日誌入力フォーム</a></div>
+  </nav>
+
+<div class="container">
+    <form class="form-horizontal" id="myForm" onsubmit="return false;">
+        <div class="form-group">
+            <label class="control-label col-xs-3">氏名</label>
+            <div class="col-xs-9">
+                <select class="form-control" id="select_id1"></select>
+                <div class="help-block with-errors"></div>
+            </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="input_id2">パスワード</label>
+            <div class="col-xs-9">
+                <input type="password" class="form-control" id="input_id2" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        
+         <div class="form-group">
+            <label class="control-label col-xs-3" for="input_id1">講義名</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" id="input_id3" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+　　　　　<div class="form-group">
+            <label class="control-label col-xs-3">授業時限</label>
+            <div class="col-xs-9">
+                <div class="checkbox" id="checkbox1">
+                    <label><input type="checkbox" id="input_id4" >1時限</label>
+                    <label><input type="checkbox" id="input_id5" >2時限</label>
+                    <label><input type="checkbox" id="input_id6" >3時限</label>
+                    <label><input type="checkbox" id="input_id7" >4時限</label>
+                    <label><input type="checkbox" id="input_id8" >5時限</label>
+                    <label><input type="checkbox" id="input_id9" >6時限</label>
+                    <label><input type="checkbox" id="input_id10" >7時限</label>
+               </div>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+        
+       
+        
+        <div class="form-group">
+            <label class="control-label col-xs-3" for="input_id2">パスワード</label>
+            <div class="col-xs-9">
+                <input type="password" class="form-control" id="input_id2" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3">チェックボックス</label>
+            <div class="col-xs-9">
+                <div class="checkbox" id="checkbox1">
+                    <label><input type="checkbox" id="input_id3" >check1</label>
+                    <label><input type="checkbox" id="input_id4" >check2</label>
+                    <label><input type="checkbox" id="input_id5" >check3</label>
+                </div>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3">ラジオボタン</label>
+            <div class="col-xs-9">
+                <div class="radio" id="radiobutton1">
+                    <label><input type="radio" name="radio1" id="input_id6" required>radio11</label>
+                    <label><input type="radio" name="radio1" id="input_id7" required>radio12</label>
+                    <label><input type="radio" name="radio1" id="input_id8" required>radio13</label>
+                </div>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-3">セレクトボックス(search)</label>
+            <div class="col-xs-9">
+                <select id="select_id1" class="selectpicker form-control" data-live-search="true" width="auto">
+                  <option selected>選択肢１</option>
+                  <option>選択肢２</option>
+                  <option>選択肢３</option>
+                  <option>テストA</option>
+                  <option>テストB</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3">セレクトボックス(multiple)</label>
+            <div class="col-xs-9">
+                <select id="select_id2" class="selectpicker form-control" multiple >
+                  <option selected>ガリガリ君（ソーダ味）</option>
+                  <option>ハーゲンダッツ</option>
+                  <option>ピノ</option>
+                  <option>ガリガリ君（コーラ味）</option>
+                </select>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <button id="send_button" type="submit" class="btn btn-primary btn-large">
+                  <i class="fa fa-send fa-lg"></i>送信
+                </button>
+            </div>
+        </div>
+    </form>
+<i id="processing" class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+</div>
+<?!= HtmlService.createHtmlOutputFromFile('javascript').getContent(); ?>
+</body>
+</html>
+
